@@ -2,7 +2,7 @@
   <header>
     <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Coding</a>
+        <router-link class="navbar-brand" to="/">Coding</router-link>
         <button
           class="navbar-toggler"
           type="button"
@@ -31,9 +31,14 @@
                 >게시글</RouterLink
               >
             </li>
+            <li class="nav-item">
+              <RouterLink class="nav-link" active-class="active" to="/nested"
+                >Nested</RouterLink
+              >
+            </li>
           </ul>
           <form class="d-flex" role="search">
-            <button class="btn btn-outline-right" type="button" @click="goPage">
+            <button class="btn btn-outline-light" type="button" @click="goPage">
               글쓰기
             </button>
           </form>
