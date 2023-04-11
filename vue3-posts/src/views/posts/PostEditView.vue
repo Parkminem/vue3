@@ -47,7 +47,6 @@ const id = route.params.id;
 const form = ref({
   title: null,
   content: null,
-  createdAt: null,
 });
 
 const fetchForm = async () => {
@@ -58,10 +57,9 @@ const fetchForm = async () => {
     console.log(error);
   }
 };
-const setForm = ({ title, content, createdAt }) => {
+const setForm = ({ title, content }) => {
   form.value.title = title;
   form.value.content = content;
-  form.value.createdAt = createdAt;
 };
 fetchForm();
 
